@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+.Content {
+  display: inline-block;
+  background-color: #8a083a;
+  width: 25vw;
+  height: 80vh;
+
+  border-radius: 4%;
+}
+
+.List {
+  display: inline-block;
+  color: aliceblue;
+  text-align: left;
+  margin: 5%;
+  border-bottom: 1px rgba(138, 132, 132, 0.418) solid;
+}
+
+.layer {
+  top: 0%;
+  left: 0%;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0, 0.4);
+}
+
+.EditWindow {
+  top: 0%;
+  display: inline-block;
+  position: absolute;
+  background-color: blue;
+  padding: 5%;
+  border-radius: 40px;
+}
