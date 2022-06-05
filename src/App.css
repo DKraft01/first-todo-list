@@ -1,73 +1,138 @@
-.App {
+html {
+  background-color: #232946;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #fffffe;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (min-width: 450px) {
+  .Content {
+    width: 40vw;
+  }
+  .addTask {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
+  .addTask input {
+    margin-right: 5px;
+    border: solid 1px #fffffe;
+    background-color: transparent;
+    padding: 1%;
+    width: 50%;
+    color: #fffffe;
+    font-size: larger;
+  }
+
+  .EditWindow {
+    width: 60%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.addTask button {
+  border: none;
+  background-color: #eebbc3;
+  color: #232946;
+  padding: 1.5%;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (max-width: 450px) {
+  .Content {
+    width: 90vw;
   }
-  to {
-    transform: rotate(360deg);
+  .addTask {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+  }
+  .addTask input {
+    margin-right: 5px;
+    border: solid 1px #fffffe;
+    background-color: transparent;
+    padding: 1%;
+    width: 50%;
+    color: #fffffe;
+    font-size: larger;
+  }
+
+  .EditWindow {
+    width: 90%;
   }
 }
-
 .Content {
   display: inline-block;
-  background-color: #8a083a;
-  width: 25vw;
-  height: 80vh;
+  background-color: #b8c1ec;
 
+  font-size: larger;
+  font-weight: bold;
   border-radius: 4%;
 }
 
 .List {
-  display: inline-block;
-  color: aliceblue;
+  background-color: #fffffe;
   text-align: left;
   margin: 5%;
+  padding: 3%;
   border-bottom: 1px rgba(138, 132, 132, 0.418) solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .layer {
   top: 0%;
   left: 0%;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
+  width: 100%;
+  height: 100%;
   background-color: rgb(0, 0, 0, 0.4);
 }
 
 .EditWindow {
-  top: 0%;
-  display: inline-block;
-  position: absolute;
-  background-color: blue;
+  background-color: #b8c1ec;
   padding: 5%;
-  border-radius: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 4%;
+}
+
+.EditWindow input {
+  background-color: #232946;
+  border: none;
+  padding: 2%;
+  width: 90%;
+  font-size: large;
+  color: #fffffe;
+  margin-right: 2%;
+}
+.EditWindow form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.EditWindow button {
+  border: none;
+  background-color: #eebbc3;
+  color: #232946;
+  padding: 2%;
+  font-weight: bold;
+}
+
+.EditWindow button:hover {
+  border: none;
+  background-color: #ffffff;
+  color: #232946;
+  padding: 2%;
+  font-weight: bold;
+  cursor: pointer;
 }

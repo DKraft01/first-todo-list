@@ -79,8 +79,13 @@ function App() {
         ))}
       </div>
 
-      <form onSubmit={(e) => AddTask(e)}>
-        <input value={Task} type={"text"} onChange={change}></input>
+      <form className="addTask" onSubmit={(e) => AddTask(e)}>
+        <input
+          placeholder="Add task"
+          value={Task}
+          type={"text"}
+          onChange={change}
+        ></input>
         <button type="submit">Add</button>
       </form>
       {ToogleEdit ? (
@@ -92,19 +97,21 @@ function App() {
 
 function Tasks(props) {
   return (
-    <div>
-      <div className="List">{props.taskItem}</div>
-      <MdEdit
-        onClick={() => {
-          props.ed(props.taskItem);
-          props.idselec(props.ind);
-        }}
-        style={{ cursor: "pointer" }}
-      />
-      <MdCheck
-        style={{ cursor: "pointer" }}
-        onClick={() => props.passID(props.ind)}
-      />
+    <div className="List">
+      {props.taskItem}
+      <div className="icons">
+        <MdEdit
+          onClick={() => {
+            props.ed(props.taskItem);
+            props.idselec(props.ind);
+          }}
+          style={{ cursor: "pointer" }}
+        />
+        <MdCheck
+          style={{ cursor: "pointer" }}
+          onClick={() => props.passID(props.ind)}
+        />
+      </div>
     </div>
   );
 }
